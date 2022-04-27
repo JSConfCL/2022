@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:workers": "wrangler pages dev ./public --local",
+    "dev:all": "concurrently \"yarn dev\" \"yarn dev:workers\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,13 +16,16 @@
     "@emotion/react": "^11.9.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
+    "concurrently": "^7.1.0",
     "graphql": "^16.3.0",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "urql": "^2.2.0"
+    "urql": "^2.2.0",
+    "wrangler": "^0.0.27"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^3.7.1",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/introspection": "2.1.1",
     "@graphql-codegen/near-operation-file-preset": "^2.2.9",
