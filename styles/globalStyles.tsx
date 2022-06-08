@@ -176,6 +176,7 @@ export const GlobalStyles = () => {
             font-family: ${theme.elements.global.fontFamily};
             color: ${theme.elements.global.color};
             max-height: 100vh;
+            background-color: ${theme.colors.jsconfYellow};
           }
           h1,
           h2,
